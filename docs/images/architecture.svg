@@ -1,0 +1,59 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1160' height='560' viewBox='0 0 1160 560'>
+<defs><marker id='ah' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M 0 0 L 10 5 L 0 10 z' fill='#1FA463'/></marker></defs>
+<rect width='1160' height='560' fill='#FFFFFF'/>
+<text x='40' y='44' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='22' fill='#0A3D2E' font-weight='bold' text-anchor='start'>GridPulse pipeline architecture</text>
+<text x='40' y='68' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='13' fill='#5F6F68' font-weight='normal' text-anchor='start'>Extract and load by SSIS; transform in T-SQL. 159,739 fact rows across 194 months.</text>
+<rect x='40' y='100' width='170' height='92' rx='6' fill='#FDF4E0' stroke='#F2A20C' stroke-width='1.5'/>
+<text x='125' y='128' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#F2A20C' font-weight='bold' text-anchor='middle'>SOURCE</text>
+<text x='125' y='150' font-family='Consolas, Monaco, monospace' font-size='13' fill='#13251E' font-weight='bold' text-anchor='middle'>MES_0226.csv</text>
+<text x='125' y='170' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#5F6F68' font-weight='normal' text-anchor='middle'>IEA monthly extract</text>
+<text x='125' y='184' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='10' fill='#5F6F68' font-weight='normal' text-anchor='middle'>8 header rows skipped</text>
+<line x1='215' y1='146' x2='272' y2='146' stroke='#1FA463' stroke-width='2' marker-end='url(#ah)'/>
+<text x='243' y='136' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='10' fill='#1FA463' font-weight='bold' text-anchor='middle'>SSIS</text>
+<rect x='278' y='100' width='210' height='92' rx='6' fill='#E6F5ED' stroke='#1FA463' stroke-width='1.5'/>
+<text x='383' y='128' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#1FA463' font-weight='bold' text-anchor='middle'>IEA_Data_Ingestion.dtsx</text>
+<text x='383' y='148' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#13251E' font-weight='normal' text-anchor='middle'>Flat File Source</text>
+<text x='383' y='164' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#13251E' font-weight='normal' text-anchor='middle'>Data Conversion</text>
+<text x='383' y='180' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#13251E' font-weight='normal' text-anchor='middle'>OLE DB Destination</text>
+<line x1='493' y1='146' x2='550' y2='146' stroke='#1FA463' stroke-width='2' marker-end='url(#ah)'/>
+<rect x='556' y='100' width='230' height='92' rx='6' fill='#FFFFFF' stroke='#0A3D2E' stroke-width='2'/>
+<text x='571' y='124' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='10' fill='#F2A20C' font-weight='bold' text-anchor='start'>LAYER 1  ·  ODS</text>
+<text x='571' y='146' font-family='Consolas, Monaco, monospace' font-size='13' fill='#0A3D2E' font-weight='bold' text-anchor='start'>IEA_Grid_Operations</text>
+<text x='571' y='166' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#5F6F68' font-weight='normal' text-anchor='start'>RawGridLog — every column</text>
+<text x='571' y='181' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#5F6F68' font-weight='normal' text-anchor='start'>NVARCHAR, nothing can fail</text>
+<rect x='556' y='232' width='230' height='92' rx='6' fill='#FFFFFF' stroke='#0A3D2E' stroke-width='2'/>
+<text x='571' y='256' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='10' fill='#F2A20C' font-weight='bold' text-anchor='start'>LAYER 2  ·  GOVERNANCE</text>
+<text x='571' y='278' font-family='Consolas, Monaco, monospace' font-size='13' fill='#0A3D2E' font-weight='bold' text-anchor='start'>IEA_Governance_Registry</text>
+<text x='571' y='298' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#5F6F68' font-weight='normal' text-anchor='start'>GeopoliticalLookup</text>
+<text x='571' y='313' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#5F6F68' font-weight='normal' text-anchor='start'>TechnologyLookup</text>
+<line x1='671' y1='196' x2='671' y2='228' stroke='#1FA463' stroke-width='2' marker-end='url(#ah)'/>
+<line x1='790' y1='146' x2='848' y2='146' stroke='#1FA463' stroke-width='2' marker-end='url(#ah)'/>
+<text x='819' y='136' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='10' fill='#1FA463' font-weight='bold' text-anchor='middle'>T-SQL</text>
+<path d='M 790 278 L 818 278 L 818 168 L 848 168' fill='none' stroke='#1FA463' stroke-width='1.8' stroke-dasharray='5 4' marker-end='url(#ah)'/>
+<text x='818' y='300' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='10' fill='#5F6F68' font-weight='normal' text-anchor='middle'>enriches</text>
+<rect x='854' y='100' width='266' height='224' rx='6' fill='#FFFFFF' stroke='#0A3D2E' stroke-width='2'/>
+<text x='869' y='124' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='10' fill='#F2A20C' font-weight='bold' text-anchor='start'>LAYER 3  ·  ANALYTICS</text>
+<text x='869' y='146' font-family='Consolas, Monaco, monospace' font-size='13' fill='#0A3D2E' font-weight='bold' text-anchor='start'>IEA_Analytics_DW</text>
+<rect x='869' y='158' width='236' height='44' rx='4' fill='#E6F5ED' stroke='#1FA463' stroke-width='1'/>
+<text x='987' y='176' font-family='Consolas, Monaco, monospace' font-size='12' fill='#0A3D2E' font-weight='bold' text-anchor='middle'>FactMonthlyElectricity</text>
+<text x='987' y='192' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='10' fill='#5F6F68' font-weight='normal' text-anchor='middle'>COUNTRY · PRODUCT · BALANCE · DATE · UNIT</text>
+<rect x='869' y='232' width='236' height='34' rx='4' fill='#FDF4E0' stroke='#F2A20C' stroke-width='1'/>
+<text x='987' y='254' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#0A3D2E' font-weight='bold' text-anchor='middle'>governed views + procedures</text>
+<text x='987' y='292' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='10' fill='#5F6F68' font-weight='normal' text-anchor='middle'>IsAggregate filter applied here,</text>
+<text x='987' y='306' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='10' fill='#5F6F68' font-weight='normal' text-anchor='middle'>so it cannot be bypassed</text>
+<line x1='987' y1='330' x2='987' y2='372' stroke='#1FA463' stroke-width='2' marker-end='url(#ah)'/>
+<rect x='854' y='378' width='128' height='74' rx='6' fill='#E6F5ED' stroke='#1FA463' stroke-width='1.5'/>
+<text x='918' y='402' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='14' fill='#0A3D2E' font-weight='bold' text-anchor='middle'>SSRS</text>
+<text x='918' y='422' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#5F6F68' font-weight='normal' text-anchor='middle'>4 reports</text>
+<text x='918' y='438' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='10' fill='#5F6F68' font-weight='normal' text-anchor='middle'>tabular · matrix</text>
+<rect x='992' y='378' width='128' height='74' rx='6' fill='#E6F5ED' stroke='#1FA463' stroke-width='1.5'/>
+<text x='1056' y='402' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='14' fill='#0A3D2E' font-weight='bold' text-anchor='middle'>Tableau</text>
+<text x='1056' y='422' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#5F6F68' font-weight='normal' text-anchor='middle'>4 visuals</text>
+<text x='1056' y='438' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='10' fill='#5F6F68' font-weight='normal' text-anchor='middle'>mix · map · trend</text>
+<rect x='40' y='378' width='790' height='74' rx='6' fill='#F7F9FA' stroke='#D8E4DE' stroke-width='1.5'/>
+<text x='60' y='402' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='12' fill='#0A3D2E' font-weight='bold' text-anchor='start'>Why ELT rather than ETL</text>
+<text x='60' y='422' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#5F6F68' font-weight='normal' text-anchor='start'>SSIS lands the raw extract untyped, so no source value can fail on ingestion and the full payload reaches a</text>
+<text x='60' y='438' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#5F6F68' font-weight='normal' text-anchor='start'>queryable surface. Lookups run afterwards as SQL joins against the governance registry, under observation.</text>
+<text x='40' y='502' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#5F6F68' font-weight='normal' text-anchor='start'>Layer boundaries are separate databases, not schemas: the separation is enforced by the engine rather than by convention.</text>
+<text x='40' y='524' font-family='Segoe UI, Helvetica Neue, Arial, sans-serif' font-size='11' fill='#5F6F68' font-weight='normal' text-anchor='start'>Referential integrity is declared in Layer 3 only.</text>
+</svg>
