@@ -1,0 +1,47 @@
+# SQL Server
+*.mdf
+*.ldf
+*.ndf
+*.bak
+*.trn
+
+# SSIS
+*.dtsx.bak
+*.ispac
+bin/
+obj/
+*.user
+*.suo
+*.dtproj.user
+
+# SSRS
+*.rdl.data
+*.rptproj.user
+
+# Tableau
+*.twbr
+*.hyper
+*.tde
+Book*.twb
+
+# Data (Note:never commit the source extract)
+*.csv
+*.xlsx
+*.xls
+!docs/sample_*.csv
+datasets/
+
+# Credentials (Note: never commit)
+*.config
+appsettings.json
+connectionStrings.config
+.env
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Office temp
+~$*
