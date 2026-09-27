@@ -24,4 +24,3 @@ No dependencies beyond the standard library. The script writes SVG directly.
 | `tableau-dashboard.png` | The assembled four-visual dashboard |
 | `ssis-dataflow.png` | The SSIS data flow surface |
 
-Check each screenshot for student numbers before uploading.
