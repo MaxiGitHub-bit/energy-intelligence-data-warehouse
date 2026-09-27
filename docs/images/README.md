@@ -15,12 +15,3 @@ To regenerate after an edit:
     python3 make_diagrams.py
 
 No dependencies beyond the standard library. The script writes SVG directly.
-
-## Screenshots still to add
-
-| Filename | Content |
-|---|---|
-| `ssrs-reports.png` | Tabular and drill-down reports side by side |
-| `tableau-dashboard.png` | The assembled four-visual dashboard |
-| `ssis-dataflow.png` | The SSIS data flow surface |
-
