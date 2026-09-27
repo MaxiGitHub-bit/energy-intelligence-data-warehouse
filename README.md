@@ -234,8 +234,6 @@ before it ships: the reports were failing, the assumed cause was row loss, and
 auditing all 159,739 rows before remediating showed the assumption was wrong. The
 actual defect was two characters in a month abbreviation.
 
-Verifying before diagnosing is the transferable part.
-
 ---
 
 ## Acknowledgement
